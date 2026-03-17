@@ -166,3 +166,63 @@ local Button = Tab:CreateButton({
       print("button clicked")
    end,
 })
+
+local Button = Tab:CreateButton({
+   Name = "19 teens per shot",
+   Callback = function()
+local garbage = getgc(true)
+
+
+
+for i, table in pairs(garbage) do
+
+if type(table) == "table" and rawget(table, "ProjectilePerShot") then
+
+rawset(table, "ProjectilePerShot", 19)
+
+end
+
+end
+      print("button clicked")
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "EquipTime",
+   Callback = function()
+local garbage = getgc(true)
+
+
+
+for i, table in pairs(garbage) do
+
+if type(table) == "table" and rawget(table, "EquipTime") then
+
+rawset(table, "EquipTime", 0)
+
+end
+
+end
+      print("button clicked")
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "projectile speed",
+   Callback = function()
+local garbage = getgc(true)
+
+
+
+for i, table in pairs(garbage) do
+
+if type(table) == "table" and rawget(table, "ProjectileSpeed") then
+
+rawset(table, "ProjectileSpeed", 12345)
+
+end
+
+end
+      print("button clicked")
+   end,
+})
