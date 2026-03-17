@@ -176,9 +176,9 @@ local garbage = getgc(true)
 
 for i, table in pairs(garbage) do
 
-if type(table) == "table" and rawget(table, "ProjectilePerShot") then
+if type(table) == "table" and rawget(table, "ProjectilesPerShot") then
 
-rawset(table, "ProjectilePerShot", 19)
+rawset(table, "ProjectilesPerShot", 19)
 
 end
 
@@ -219,6 +219,46 @@ for i, table in pairs(garbage) do
 if type(table) == "table" and rawget(table, "ProjectileSpeed") then
 
 rawset(table, "ProjectileSpeed", 12345)
+
+end
+
+end
+      print("button clicked")
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "pierce shieldington",
+   Callback = function()
+local garbage = getgc(true)
+
+
+
+for i, table in pairs(garbage) do
+
+if type(table) == "table" and rawget(table, "PierceShield") then
+
+rawset(table, "PierceShield", true)
+
+end
+
+end
+      print("button clicked")
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Knockbackington",
+   Callback = function()
+local garbage = getgc(true)
+
+
+
+for i, table in pairs(garbage) do
+
+if type(table) == "table" and rawget(table, "Knockback") then
+
+rawset(table, "Knockback", 0)
 
 end
 
