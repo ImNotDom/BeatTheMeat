@@ -259,3 +259,23 @@ end
       print("button clicked")
    end,
 })
+
+local Button = Tab:CreateButton({
+   Name = "Full Auto",
+   Callback = function()
+local garbage = getgc(true)
+
+
+
+for i, table in pairs(garbage) do
+
+if type(table) == "table" and rawget(table, "Automatic") then
+
+rawset(table, "Automatic", true)
+
+end
+
+end
+      print("button clicked")
+   end,
+})
