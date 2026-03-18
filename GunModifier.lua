@@ -178,7 +178,7 @@ for i, table in pairs(garbage) do
 
 if type(table) == "table" and rawget(table, "ProjectilesPerShot") then
 
-rawset(table, "ProjectilesPerShot", 19)
+rawset(table, "ProjectilesPerShot", 3)
 
 end
 
