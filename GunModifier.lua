@@ -161,14 +161,7 @@ end
 })
 
 local Button = Tab:CreateButton({
-   Name = "what do i add next",
-   Callback = function()
-      print("button clicked")
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "19 teens per shot",
+   Name = "5 teens per shot",
    Callback = function()
 local garbage = getgc(true)
 
@@ -178,7 +171,7 @@ for i, table in pairs(garbage) do
 
 if type(table) == "table" and rawget(table, "ProjectilesPerShot") then
 
-rawset(table, "ProjectilesPerShot", 3)
+rawset(table, "ProjectilesPerShot", 5.5)
 
 end
 
