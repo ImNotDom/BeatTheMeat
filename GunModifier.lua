@@ -280,12 +280,14 @@ end
    end,
 })
 
+
 local Tab = Window:CreateTab("railing someone", 4483362458) -- Title, Image
+
 
 local Button = Tab:CreateButton({
    Name = "heat device",
    Callback = function()
-local gc = (getgc and getgc(true)) or (getgc and getgc())
+         local gc = (getgc and getgc(true)) or (getgc and getgc())
 
 if type(gc) == "table" then
     local modifiedCount = 0
@@ -319,3 +321,4 @@ if type(gc) == "table" then
 else
     warn("[ERROR] getgc() returned nil or is not supported by your environment.")
          end
+         
