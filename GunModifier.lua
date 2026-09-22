@@ -279,3 +279,43 @@ end
       print("button clicked")
    end,
 })
+
+local Tab = Window:CreateTab("railing someone", 4483362458) -- Title, Image
+
+local Button = Tab:CreateButton({
+   Name = "Test",
+   Callback = function()
+local gc = (getgc and getgc(true)) or (getgc and getgc())
+
+if type(gc) == "table" then
+    local modifiedCount = 0
+    
+    for i = 1, #gc do
+        local item = gc[i]
+        if type(item) == "table" and (rawget(item, "BuildUpHeat") ~= nil or rawget(item, "HeatPerShot") ~= nil or rawget(item, "Spread") ~= nil) then
+            -- Heat modifications
+            rawset(item, "BuildUpHeat", false)
+            rawset(item, "HeatPerShot", 0)
+            
+            -- Spread modification
+            rawset(item, "Spread", 175)
+            
+            -- Projectiles / Bullets per shot (handles both common key variations)
+            if rawget(item, "ProjectilesPerShot") ~= nil then
+                rawset(item, "ProjectilesPerShot", 167)
+            end
+            if rawget(item, "BulletPerShot") ~= nil then
+                rawset(item, "BulletPerShot", 167)
+            end
+            if rawget(item, "BulletsPerShot") ~= nil then
+                rawset(item, "BulletsPerShot", 167)
+            end
+
+            modifiedCount = modifiedCount + 1
+        end
+    end
+    
+    print("[SUCCESS] Modified gun settings on " .. tostring(modifiedCount) .. " table(s) in GC!")
+else
+    warn("[ERROR] getgc() returned nil or is not supported by your environment.")
+         end
