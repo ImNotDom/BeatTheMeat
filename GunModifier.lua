@@ -283,7 +283,7 @@ end
 local Tab = Window:CreateTab("railing someone", 4483362458) -- Title, Image
 
 local Button = Tab:CreateButton({
-   Name = "Test",
+   Name = "heat device",
    Callback = function()
 local gc = (getgc and getgc(true)) or (getgc and getgc())
 
