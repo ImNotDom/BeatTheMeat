@@ -321,4 +321,6 @@ if type(gc) == "table" then
 else
     warn("[ERROR] getgc() returned nil or is not supported by your environment.")
          end
-         
+         print("button clicked")
+   end,
+})
