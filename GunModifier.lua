@@ -300,7 +300,7 @@ if type(gc) == "table" then
             rawset(item, "HeatPerShot", 0)
             
             -- Spread modification
-            rawset(item, "Spread", 175)
+            rawset(item, "Spread", 111)
             
             -- Projectiles / Bullets per shot (handles both common key variations)
             if rawget(item, "ProjectilesPerShot") ~= nil then
